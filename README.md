@@ -1,7 +1,8 @@
 # Kian
 Simple Ezpass system MVC Java  window base + web 
 
-Hi all, this is my java programming final project. It is very basic and simple program. Hope can help someone :)
+Hi all, this is my java programming final project. 
+It is very basic and simple program. Hope can help someone :)
 
 
 For window base I used Java Swing GUI. 
