@@ -14,12 +14,11 @@ For window base I used Java Swing GUI.
   So, first you need the Blazix.
       second put all of the code into your Blazix/webfiles/your forder/
       third put all the Servelet code into your Blazix/classes forder/
-      
       and the entity object of webase is the same of window base, so you can download in windowbase/com/ezpass/
 
 
 If you have any question, please email me: fqmarkvon@gmail.com
                                           or fqmark@163.com
                                           
-    Thanks
+ Thanks
     
