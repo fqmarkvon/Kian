@@ -1,4 +1,4 @@
-# Simple program
+# Simple Ezpass system MVC
 Simple Ezpass system MVC Java  window base + web 
 
 Hi all, this is my java programming final project. 
