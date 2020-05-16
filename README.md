@@ -8,6 +8,7 @@ It is very basic and simple program. Hope can help someone :)
 For window base I used Java Swing GUI. 
   So basically, if you want to use my code
     first you need to seting your database(I'm using sql).
+    
     second after all the database setting complete(including creating tables in database) you may change the import path of each code.
     
     
