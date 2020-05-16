@@ -1,0 +1,83 @@
+<!--
+/******************************************************************************
+*	Program Author: Dr. Yongming Tang for CSCI 6810 Java and the Internet	  *
+*	Date: September, 2012													  *
+*******************************************************************************/
+-->
+
+<HTML>
+	<HEAD>
+	<TITLE>CreateProfile</TITLE>
+	</HEAD>
+	<BODY BGCOLOR="WHITE">
+
+	<h3>CreateProfile Page</h3><br>
+
+	<FORM NAME="CreateProfilePage" ACTION="/CSCI6810/CreateProfile.jsp" METHOD ="post"> <!-- /OnlineSignUpServlet-->
+
+	<table>
+	<tr><td>Customer Name:</td><td><INPUT TYPE="TEXT" NAME="NameField" SIZE=20></td></tr>
+	<tr><td>Username:</td><td><INPUT TYPE="TEXT" NAME="UsernameField" SIZE=20></td></tr>
+
+	<tr><td>Street:</td><td><INPUT TYPE="TEXT" NAME="StreetField" SIZE=20></td></tr>
+	<tr><td>City:</td><td><INPUT TYPE="TEXT" NAME="CityField" SIZE=20></td></tr>
+    <tr><td>State:</td><td><INPUT TYPE="TEXT" NAME="StateField" SIZE=20></td></tr>
+	<tr><td>Zip:</td><td><INPUT TYPE="TEXT" NAME="ZipField" SIZE=20></td></tr>
+	<tr><td>Phone:</td><td><INPUT TYPE="TEXT" NAME="PhoneField" SIZE=20></td></tr>
+	<tr><td>Email:</td><td><INPUT TYPE="TEXT" NAME="EmailField" SIZE=20></td></tr>
+	<tr><td>Balance:</td><td><INPUT TYPE="TEXT" NAME="BalanceField" SIZE=20></td></tr>
+	</table>
+
+	<P>
+    <INPUT TYPE="BUTTON" VALUE="Create" onClick="create()">
+    </P>
+	</FORM>
+	</BODY>
+	</HTML>
+
+	<SCRIPT LANGUAGE="JavaScript">
+	document.CreateProfilePage.StreetField.focus();
+	   function create()
+	   {
+		   var Prompts = "";
+		   Username = window.document.CreateProfilePage.UsernameField.value;
+		   //Password = document.SignUpPage.PasswordField.value;
+		   //RePassword = SignUpPage.RePasswordField.value;
+		   Customername = document.CreateProfilePage.NameField.value;
+           Street = document.CreateProfilePage.StreetField.value;
+           City = document.CreateProfilePage.CityField.value;
+		   State = document.CreateProfilePage.StateField.value;
+		   Zip = document.CreateProfilePage.ZipField.value;
+		   Phone = document.CreateProfilePage.PhoneField.value;
+		   Email = document.CreateProfilePage.EmailField.value;
+           Balance = document.CreateProfilePage.BalanceField.value;
+
+           //alert("Hello world!");
+
+		   if (Username == "" || Customername == "" || Street == "" || City == "" ||State == ""|| Zip == ""|| Phone == ""|| Email == ""|| Balance == "") {
+			  if (Username == "")
+				 Prompts +="Please enter your username!\n";
+			  if (Customername == "")
+				 Prompts +="Please enter your name!\n";
+			  if (Street == "")
+                 Prompts +="Please enter your street!\n";
+              if (City == "")
+				 Prompts +="Please enter your street!\n";
+			  if (State == "")
+                 Prompts +="Please enter your state!\n";
+              if (Zip == "")
+                 Prompts +="Please enter your Zip!\n";
+              if (Phone == "")
+                 Prompts +="Please enter your Phone!\n";
+              if (Email == "")
+                 Prompts +="Please enter your Email!\n";
+              if (Balance == "")
+				 Prompts +="Please enter your Balance!\n";
+			  if (Prompts != "")
+				 window.alert(Prompts);
+		   } else {
+			  document.CreateProfilePage.submit();
+		   }
+	   }
+
+	</SCRIPT>

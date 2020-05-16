@@ -1,0 +1,82 @@
+<%@ page import="java.util.*" %>
+<%@ page import="java.lang.*" %>
+<%@ page import="com.ezpass.*;" %>
+
+<%
+   
+    String CustomerID = new String("");
+
+	CustomerID = request.getParameter( "CustomerID" );
+   
+
+
+     
+              
+%>
+
+<HTML>
+	<HEAD>
+	<TITLE>PayToll</TITLE>
+	</HEAD>
+	<BODY BGCOLOR="WHITE">
+	
+	<h3>PayToll Page</h3><br>
+	
+	<FORM NAME="PayTollPage" ACTION="/CSCI6810/PayToll.jsp" METHOD ="post"> <!-- /OnlineSignUpServlet-->
+	
+	<table>
+	<tr><td>CustomerID:</td><td><INPUT TYPE="TEXT" NAME="IDField"  Value='<%= CustomerID %>' SIZE=20></td></tr>
+	<tr><td>TagCode:</td><td><INPUT TYPE="TEXT" NAME="TagCodeField" SIZE=20></td></tr>
+	<tr><td>Date:</td><td><INPUT TYPE="TEXT" NAME="DateField" SIZE=20></td></tr>
+    <tr><td>Time:</td><td><INPUT TYPE="TEXT" NAME="TimeField" SIZE=20></td></tr>
+	<tr><td>Plaza:</td><td><INPUT TYPE="TEXT" NAME="PlazaField" SIZE=20></td></tr>
+	<tr><td>TollAmount:</td><td><INPUT TYPE="TEXT" NAME="TollAmountField" SIZE=20></td></tr>
+	<tr><td>TollNumber:</td><td><INPUT TYPE="TEXT" NAME="TollNumberField" SIZE=20></td></tr>
+	</table>
+	
+	<P>
+	<INPUT TYPE="BUTTON" VALUE="PayToll" onClick="pay()">
+	</P>
+	</FORM>
+	</BODY>
+    </HTML>
+    
+    <SCRIPT LANGUAGE="JavaScript">
+        document.PayTollPage.TagCodeField.focus();
+           function pay()
+           {
+               var Prompts = "";
+               TagCode = window.document.PayTollPage.TagCodeField.value;
+               //Password = document.SignUpPage.PasswordField.value;
+               //RePassword = SignUpPage.RePasswordField.value;
+               CustomerID = document.PayTollPage.IDField.value;
+               Date = document.PayTollPage.DateField.value;
+               Time = document.PayTollPage.TimeField.value;
+               Plaza = document.PayTollPage.PlazaField.value;
+               TollAmount = document.PayTollPage.TollAmountField.value;
+               TollNumber = document.PayTollPage.TollNumberField.value;
+               
+        
+               if (CustomerID == "" || TagCode == "" || Date  == "" || Time == ""|| Plaza == ""|| TollAmount == ""|| TollNumber == "") {
+                  if (CustomerID == "")
+                     Prompts +="Please enter your CustomerID!\n";
+                  if (TagCode == "")
+                     Prompts +="Please enter your TagCode !\n";
+                  if (Date == "")
+                     Prompts +="Please enter your Date!\n";
+                  if (Time == "")
+                     Prompts +="Please enter your Time!\n";
+                  if (Plaza == "")
+                     Prompts +="Please enter your Plaza!\n";
+                  if (TollAmount == "")
+                     Prompts +="Please enter your TollAmount!\n";
+                  if (TollNumber == "")
+                     Prompts +="Please enter your TollNumber!\n";
+                  if (Prompts != "")
+                     window.alert(Prompts);
+               } else {
+                  document.PayTollPage.submit();
+               }
+           }
+        
+        </SCRIPT>
