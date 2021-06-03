@@ -24,5 +24,5 @@ For window base I used Java Swing GUI.
   4.and the entity object of webase is the same of window base, so you can download in windowbase/com/ezpass/
 
                                           
- Thanks
+
     
